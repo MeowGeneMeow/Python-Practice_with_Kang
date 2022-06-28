@@ -1,3 +1,4 @@
+
 # 抓取 PTT 電影版的網頁原始碼（HTML）
 import urllib.request as req
 url = "https://www.ptt.cc/bbs/movie/index.html"
@@ -16,5 +17,6 @@ titles = root.find_all("div", class_="title") # 尋找所有 class = "title" 的
 for title in titles:
 	if title.a != None : # 如果標題包含 a 標籤（沒有被刪除的文章), 印出來
 		print(title.a.string)
+
 
 # 執行： python CrawlerPractice.py

@@ -1,7 +1,12 @@
+import openpyxl
+
 from itertools import chain
+
 
 # 抓取 PTT 電影版的網頁原始碼（HTML）
 import urllib.request as req
+
+from openpyxl import Workbook
 url = "https://tw.stock.yahoo.com/rank/price"
 # 建立一個 Request 物件, 附加 Request Headers 的資訊
 request = req.Request(url, headers = {
@@ -28,11 +33,40 @@ closingPrices = root.find_all("div", class_="")
 
 for meow in chain (range (len(brands)), range(len(brandNumbers))) :
 	print(brands[meow].string+"  "+brandNumbers[meow].string)
-#, range(len(brandNumbers))
+
+
 searchTitle = input('你想搜尋哪支股票:')
 for meow in chain (range (len(brands))) :
 	if(brands[meow].string.find(searchTitle) != -1):
 		print(brands[meow].string+"  "+brandNumbers[meow].string)
 	
+
+
+# 將爬蟲資料存成 Excel 檔
+
+# 建立新活頁簿
+wb = Workbook()
+
+# 顯示工作表名稱
+# print(wb.sheetnames)
+sheet = wb['Sheet']
+
+
+
+titles = ("公司名稱","公司代碼")
+sheet.append(titles)
+
+for i in range (len(brands)):
+	sheet.cell(row = i+1, column=1, value=brands[i].string)
+
+for j in range (len(brandNumbers)):
+	sheet.cell(row = j+1, column=2, value=brandNumbers[j].string)
+
+
+sheet.insert_rows(1,1)
+sheet.cell(row = 1 , column = 1, value = "公司名稱")
+sheet.cell(row = 1 , column = 2, value = "公司代號")
+wb.save("yahoostock.xlsx")
+
 
 # 執行： python crawlerHW1.py 
