@@ -1,0 +1,70 @@
+// html樣式
+html{
+    //垂直方向滾動
+    overflow-y: scroll;
+}
+
+//body樣式
+body{
+    //字體加粗
+    font-weight:300;
+    //文字自動換行
+    word-break: break-word;
+}
+
+//標題一
+h1{
+    border-bottom: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+//標題二
+h2{
+    color: #444;
+    font-weight: 500;
+}
+
+//標題三
+h3{
+    border-top: 1px solid #eee;
+    color: #666;
+    font-weight:500;
+    margin:10px 0 10px 0;
+    white-space: nowrap;
+}
+
+//主容器
+.container{
+    //左右居中
+    margin: 0 auto 0 auto;
+    //最大寬度
+    max-width: 600px;
+    padding : 10px 0px 10px 0px;
+}
+
+//影片默認樣式
+.video{
+    //背景色
+    background: #222;
+    margin: 0 0 20px 0;
+    //寬高值,寬高比例4:3
+    width:640px;
+    height:480px;
+}
+
+//畫布默認樣式
+.canvas{
+    background-color: #ccc;
+    //寬高值,寬高比例4:3
+    width:640px;
+    height:480px;
+}
+
+
+//錯誤警告樣式
+.warning{
+    color: red;
+    font-weight:400;
+}
