@@ -1,0 +1,23 @@
+{
+  "name": "python-practice_with_qsnake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeowGeneMeow/Python-Practice_with_Qsnake.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeowGeneMeow/Python-Practice_with_Qsnake/issues"
+  },
+  "homepage": "https://github.com/MeowGeneMeow/Python-Practice_with_Qsnake#readme",
+  "dependencies": {
+    "simple-peer": "^9.11.1"
+  }
+}

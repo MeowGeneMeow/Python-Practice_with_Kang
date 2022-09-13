@@ -68,4 +68,4 @@ sheet.cell(row=1, column=2, value="公司代號")
 wb.save("yahoostock.xlsx")
 
 
-# 執行： python crawlerHW1.py
+# 執行： python3 crawlerHW1.py

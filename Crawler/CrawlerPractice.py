@@ -19,4 +19,4 @@ for title in titles:
         print(title.a.string)
 
 
-# 執行： python CrawlerPractice.py
+# 執行： python3 CrawlerPractice.py

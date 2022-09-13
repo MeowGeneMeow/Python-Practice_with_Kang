@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1on1 webrtc</title>
+
+    <style>
+      .none {
+        -webkit-filter: none;
+        filter: none;
+      }
+    
+      .blur {
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+      }
+    
+      .grayscale {
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+      }
+    
+      .invert {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+      }
+    
+      .sepia {
+        -webkit-filter: sepia(1);
+        filter: sepia(1);
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div>
+        <label>切換麥克風:</label>
+        <select id="audioSource"></select>
+      </div>
+      
+      <div>
+        <label>切換攝影機:</label>
+        <select id="videoSource"></select>
+      </div>
+
+      <div>
+        <button id="startBtn">開始</button>
+        <button id="leaveBtn">離開</button>
+        <button name="audio" id="audioBtn">開啟麥克風</button>
+        <button name="video" id="VideoBtn">開啟鏡頭</button>
+      </div>
+
+      <div><button id="shoot">拍照</button></div>
+
+      <div>
+        <video muted width="320" autoplay playsinline id="localVideo"></video>
+        <video width="320" autoplay playsinline id="remoteVideo"></video>
+      </div>
+
+      <div>
+        <label>濾鏡:</label>
+        <select id="filter">
+          <option value="none">None</option>
+          <option value="blur">Blur</option>
+          <option value="grayscale">Grayscale</option>
+          <option value="invert">Invert</option>
+          <option value="sepia">Sepia</option>
+        </select>
+      </div>
+
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+    <!-- <script src="./js/main.js"></script> -->
+    
+    <script src="main.js"></script> 
+  </body>
+</html>

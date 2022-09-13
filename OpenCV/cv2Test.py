@@ -26,14 +26,14 @@ cv2.waitKey(0) # 0 → 等鍵盤按才關，單位毫秒
 # 執行: python cv2Test.py 
 
 # 以下是取用視訊鏡頭畫面
-# cap = cv2.VideoCapture(0)  #default inner capture
+ cap = cv2.VideoCapture(0)  #default inner capture
 
-# while True:
-    # ret, frame = cap.read()
-    # if ret:
-        # frame = cv2.resize(frame, (0,0), fx=1.2, fy=1.2)
-        # cv2.imshow('video', frame)
-    # else:
-        # break
-    # if cv2.waitKey(10) == ord('q'):
-        # break 
+ while True:
+     ret, frame = cap.read()
+     if ret:
+         frame = cv2.resize(frame, (0,0), fx=1.2, fy=1.2)
+         cv2.imshow('video', frame)
+     else:
+         break
+     if cv2.waitKey(10) == ord('q'):
+         break 
